@@ -60,8 +60,9 @@ for i in range(f['Name'].size):
     role = f['Role'][i]
     spec = f['Spec'][i]
 
+    # Handle names and signup exceptions
     if role != 'Tentative' and role != 'Absence' and role != 'Late' and role != 'Bench':
-        names = names + '(' + str(i+1) + ') ' + name + ';'
+        names = names + '(' + str(i + 1) + ') ' + name + ';'
     if role == 'Tentative':
         names = names + '(' + str(i + 1) + ') ' + name + ' (T);'
     if role == 'Late':
@@ -69,6 +70,7 @@ for i in range(f['Name'].size):
     if role == 'Bench':
         names = names + '(' + str(i + 1) + ') ' + name + ' (B);'
 
+    # Druids
     if spec == 'Balance':
         roles = roles + balanceDruidChar
     if spec == 'Feral' or spec == 'Guardian':
@@ -76,6 +78,7 @@ for i in range(f['Name'].size):
     if spec == 'Restoration':
         roles = roles + restoDruidChar
 
+    # Rogues
     if spec == 'Assassination':
         roles = roles + assassinationRogueChar
     if spec == 'Combat':
@@ -83,6 +86,7 @@ for i in range(f['Name'].size):
     if spec == "Subtlety":
         roles = roles + subRogueChar
 
+    # Hunters
     if spec == 'Beastmastery':
         roles = roles + beastMasterHunterChar
     if spec == 'Marksman':
@@ -90,6 +94,7 @@ for i in range(f['Name'].size):
     if spec == 'Survival':
         roles = roles + survHunterChar
 
+    # Shamans
     if spec == 'Elemental':
         roles = roles + eleShamanChar
     if spec == 'Enhancement':
@@ -97,6 +102,7 @@ for i in range(f['Name'].size):
     if spec == 'Restoration1':
         roles = roles + restoShamanChar
 
+    # Mages
     if spec == 'Arcane':
         roles = roles + arcaneMageChar
     if spec == 'Fire':
@@ -104,27 +110,31 @@ for i in range(f['Name'].size):
     if spec == 'Frost':
         roles = roles + frostMageChar
 
+    # Warlocks
     if spec == 'Affliction':
         roles = roles + affWarlockChar
     if spec == 'Demonology':
         roles = roles + demonWarlockChar
     if spec == 'Destruction':
         roles = roles + destroWarlockChar
-
+        
+    # Paladins
     if spec == 'Holy1':
         roles = roles + holyPaladinChar
     if spec == 'Protection1':
         roles = roles + protPaladinChar
     if spec == 'Retribution':
         roles = roles + retPaladinChar
-
+        
+    # Warriors
     if spec == 'Arms':
         roles = roles + armsWarriorChar
     if spec == 'Fury':
         roles = roles + furyWarriorChar
     if spec == 'Protection':
         roles = roles + protWarriorChar
-
+        
+    # Priests
     if spec == 'Discipline':
         roles = roles + discPriestChar
     if spec == 'Holy':
