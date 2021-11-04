@@ -1,44 +1,53 @@
 import pandas as pd
 import pyperclip
 
-# Store some static data as variables to make it easier to change later if need be
+# Create the beginnings of the strings needed to complete the full URL
 urlPrefix = 'https://tbc.wowhead.com/raid-composition'
 names = ';'
 roles = '#0'
 
-# Each class has a unique character assigned to it in the wowhead raid compositon tool
+# Each spec has a unique character assigned to it in the wowhead raid compositon tool
+# Druids
 balanceDruidChar = "x"
 feralDruidChar = 'v'
 restoDruidChar = 'w'
 
+# Rogues
 assassinationRogueChar = 'k'
 combatRogueChar = 'j'
 subRogueChar = 'm'
 
+# Hunters
 beastMasterHunterChar = 'C'
 marksHunterChar = 'F'
 survHunterChar = 'D'
 
+# Shamans
 eleShamanChar = 'r'
 enhShamanChar = 't'
 restoShamanChar = 's'
 
+# Mages
 arcaneMageChar = 'd'
 fireMageChar = 'b'
 frostMageChar = 'c'
 
+# Warlocks
 affWarlockChar = 'z'
 demonWarlockChar = 'B'
 destroWarlockChar = 'y'
 
+# Paladins
 holyPaladinChar = 'H'
 protPaladinChar = 'J'
 retPaladinChar = 'G'
 
+# Warriors
 armsWarriorChar = 'f'
 furyWarriorChar = 'h'
 protWarriorChar = 'g'
 
+# Priests
 discPriestChar = 'n'
 holyPriestChar = 'p'
 shadowPriestChar = 'q'
