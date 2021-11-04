@@ -60,7 +60,7 @@ for i in range(f['Name'].size):
     role = f['Role'][i]
     spec = f['Spec'][i]
 
-    if role != 'Tentative' and role != 'Absence' and role != 'Late':
+    if role != 'Tentative' and role != 'Absence' and role != 'Late' and role != 'Bench':
         names = names + '(' + str(i+1) + ') ' + name + ';'
     if role == 'Tentative':
         names = names + '(' + str(i + 1) + ') ' + name + ' (T);'
