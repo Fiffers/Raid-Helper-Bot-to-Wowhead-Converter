@@ -7,3 +7,8 @@ Copy raw csv data from Raid-Helper Bot. Copied data should begin at where it say
 Run main.py in a terminal
 
 The URL for the raid composition planner is now on your clipboard, so just paste it in a web browser.
+
+# Dependencies:
+Pandas - Used to parse and save .csv files.
+
+Pyperclip - Used to read and write to clipboard
