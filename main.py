@@ -1,11 +1,12 @@
 import pandas as pd
 import pyperclip
 
-# Store some static data as variables to make it easier to change later if need be
+# Get the beginning part of the URL created. We'll add to the names and roles string later.
 urlPrefix = 'https://tbc.wowhead.com/raid-composition'
 names = ';'
 roles = '#0'
 
+# Each spec has a unique ASCII character assigned to it, we're storing those here for use later.
 # Druid
 balanceDruidChar = "x"
 feralDruidChar = 'v'
