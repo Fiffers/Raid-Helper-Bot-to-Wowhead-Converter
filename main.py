@@ -6,38 +6,47 @@ urlPrefix = 'https://tbc.wowhead.com/raid-composition'
 names = ';'
 roles = '#0'
 
+# Druid
 balanceDruidChar = "x"
 feralDruidChar = 'v'
 restoDruidChar = 'w'
 
+# Rogue
 assassinationRogueChar = 'k'
 combatRogueChar = 'j'
 subRogueChar = 'm'
 
+# Hunter
 beastMasterHunterChar = 'C'
 marksHunterChar = 'F'
 survHunterChar = 'D'
 
+# Shaman
 eleShamanChar = 'r'
 enhShamanChar = 't'
 restoShamanChar = 's'
 
+# Mage
 arcaneMageChar = 'd'
 fireMageChar = 'b'
 frostMageChar = 'c'
 
+# Warlock
 affWarlockChar = 'z'
 demonWarlockChar = 'B'
 destroWarlockChar = 'y'
 
+# Paladin
 holyPaladinChar = 'H'
 protPaladinChar = 'J'
 retPaladinChar = 'G'
 
+# Warrior
 armsWarriorChar = 'f'
 furyWarriorChar = 'h'
 protWarriorChar = 'g'
 
+# Priest
 discPriestChar = 'n'
 holyPriestChar = 'p'
 shadowPriestChar = 'q'
