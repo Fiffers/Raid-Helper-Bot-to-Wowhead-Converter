@@ -54,7 +54,8 @@ sorted_df.to_csv('csv/raidhelper.csv', index=False)
 # read new csv file
 f = pd.read_csv('csv/raidhelper.csv', usecols=['Name','Role','Spec'])
 
-# iterate through csv and check each line for name, role, spec. Adds names and roles to URL generator.
+# iterate through csv and check each line for name, role, spec. Adds names and spec to URL generator. Each spec has a specific character used in
+# wowheads raid composition tool
 for i in range(f['Name'].size):
     name = f['Name'][i]
     role = f['Role'][i]
