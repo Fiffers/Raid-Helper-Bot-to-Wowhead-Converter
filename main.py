@@ -6,6 +6,7 @@ urlPrefix = 'https://tbc.wowhead.com/raid-composition'
 names = ';'
 roles = '#0'
 
+# Each class has a unique character assigned to it in the wowhead raid compositon tool
 balanceDruidChar = "x"
 feralDruidChar = 'v'
 restoDruidChar = 'w'
@@ -117,7 +118,7 @@ for i in range(f['Name'].size):
         roles = roles + demonWarlockChar
     if spec == 'Destruction':
         roles = roles + destroWarlockChar
-        
+
     # Paladins
     if spec == 'Holy1':
         roles = roles + holyPaladinChar
@@ -125,7 +126,7 @@ for i in range(f['Name'].size):
         roles = roles + protPaladinChar
     if spec == 'Retribution':
         roles = roles + retPaladinChar
-        
+
     # Warriors
     if spec == 'Arms':
         roles = roles + armsWarriorChar
@@ -133,7 +134,7 @@ for i in range(f['Name'].size):
         roles = roles + furyWarriorChar
     if spec == 'Protection':
         roles = roles + protWarriorChar
-        
+
     # Priests
     if spec == 'Discipline':
         roles = roles + discPriestChar
