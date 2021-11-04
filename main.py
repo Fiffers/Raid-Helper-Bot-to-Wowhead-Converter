@@ -1,6 +1,7 @@
 import pandas as pd
 import pyperclip
 
+# Store some static data as variables to make it easier to change later if need be
 urlPrefix = 'https://tbc.wowhead.com/raid-composition'
 names = ';'
 roles = '#0'
@@ -45,13 +46,15 @@ shadowPriestChar = 'q'
 # clipboard in as a .csv file. It uses read_csv() under
 # the hood.
 df = pd.read_clipboard(sep=',')
-# sort data by bedrooms
+# sort data by timestamp
 sorted_df = df.sort_values(by=["Timestamp"])
 # export dataframe as .csv file
 sorted_df.to_csv('csv/raidhelper.csv', index=False)
 
+# read new csv file
 f = pd.read_csv('csv/raidhelper.csv', usecols=['Name','Role','Spec'])
 
+# iterate through csv and check each line for name, role, spec. Adds names and roles to URL generator.
 for i in range(f['Name'].size):
     name = f['Name'][i]
     role = f['Role'][i]
@@ -129,7 +132,10 @@ for i in range(f['Name'].size):
             roles = roles + holyPriestChar
         if spec == 'Shadow':
             roles = roles + shadowPriestChar
-
+            
+# Copy generated URL to clipboard
 pyperclip.copy(urlPrefix + roles + names)
+
+# Supplemental print to help the user understand what just happened
 print('The URL is now copied to your clipboard. Paste it into a web browser.')
 print(urlPrefix + roles + names)
