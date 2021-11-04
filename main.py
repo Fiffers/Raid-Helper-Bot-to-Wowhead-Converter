@@ -66,6 +66,8 @@ for i in range(f['Name'].size):
         names = names + '(' + str(i + 1) + ') ' + name + ' (T);'
     if role == 'Late':
         names = names + '(' + str(i + 1) + ') ' + name + ' (L);'
+    if role == 'Bench':
+        names = names + '(' + str(i + 1) + ') ' + name + ' (B);'
 
     if spec == 'Balance':
         roles = roles + balanceDruidChar
